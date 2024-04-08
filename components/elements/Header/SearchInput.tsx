@@ -147,7 +147,7 @@ const SearchInput = () => {
           components={{
             NoOptionsMessage: spinner ? NoOptionsSpinner : NoOptionsMessage,
           }}
-          placeholder="Ma otsin..."
+          placeholder="Я ищу..."
           value={searchOption}
           onChange={handleSearchOptionChange}
           styles={{
