@@ -163,27 +163,16 @@ const SearchInput = () => {
               transition: 'none',
               ...onMenuOpenControlStyles,
             }),
-            input: (defaultStyles: CSSObjectWithLabel, props: InputProps<IOption, boolean, GroupBase<IOption>>) => ({
+            input: (defaultStyles) => ({
               ...defaultStyles,
               color: mode === 'dark' ? '#f2f2f2' : '#222222',
             }),
-            menu: (defaultStyles: CSSObjectWithLabel, props: MenuProps<IOption, boolean, GroupBase<IOption>>) => ({
-              ...defaultStyles,
+            menu: (defaultStyles) => ({
+              ...menuStyles(defaultStyles, mode),
               zIndex,
               marginTop: '-1px',
             }),
-            option: (defaultStyles: CSSObjectWithLabel, state: OptionProps<IOption, boolean, GroupBase<IOption>>) => ({
-              ...defaultStyles,
-              cursor: 'pointer',
-              padding: '8px 12px',
-              margin: 0,
-              '&:hover': {
-                backgroundColor: '#f5f5f5',
-                color: '#222222',
-              },
-              backgroundColor: state.isSelected ? '#f5f5f5' : 'transparent',
-              color: state.isSelected ? '#222222' : '#222222',
-            }),
+            option: (defaultStyles, state) => ({
               ...optionStyles(defaultStyles, state, mode),
             }),
           }}
