@@ -48,7 +48,7 @@ const SignInForm = () => {
       onSubmit={handleSubmit(onSubmit)}
     >
       <h2 className={`${styles.form__title} ${styles.title} ${darkModeClass}`}>
-      Loogi sisse
+        Войти на сайт
       </h2>
       <NameInput register={register} errors={errors} />
       <PasswordInput register={register} errors={errors} />

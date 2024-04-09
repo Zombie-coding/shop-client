@@ -34,11 +34,11 @@ const FeedbackForm = () => {
       )
       .then((result) => {
         setSpinner(false)
-        toast.success(`Sõnum on saadetud! ${result.text}`)
+        toast.success(`Сообщение отправлено! ${result.text}`)
       })
       .catch((error) => {
         setSpinner(false)
-        toast.error(`Midagi on läinud valesti! ${error.text}`)
+        toast.error(`Что-то пошло не так! ${error.text}`)
       })
 
     formRef.current.reset()
@@ -47,7 +47,7 @@ const FeedbackForm = () => {
   return (
     <div className={`${styles.feedback_form} ${darkModeClass}`}>
       <h3 className={`${styles.feedback_form__title} ${darkModeClass}`}>
-      Tagasiside vorm
+        Форма обратной связи
       </h3>
       <form
         ref={formRef}
@@ -82,7 +82,7 @@ const FeedbackForm = () => {
                 style={{ top: '6px', left: '47%' }}
               />
             ) : (
-              'Saada sõnum'
+              'Отправить сообщение'
             )}
           </button>
         </div>

@@ -5,13 +5,13 @@ import AboutPage from '@/components/templates/AboutPage/AboutPage'
 import Breadcrumbs from '@/components/modules/Breadcrumbs/Breadcrumbs'
 
 function About() {
-  const getDefaultTextGenerator = useCallback(() => 'Ettevõttest', [])
+  const getDefaultTextGenerator = useCallback(() => 'О компании', [])
   const getTextGenerator = useCallback((param: string) => ({}[param]), [])
 
   return (
     <>
       <Head>
-        <title>Voinikoo | Ettevõttest</title>
+        <title>Аква Тепмикс | О компании</title>
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

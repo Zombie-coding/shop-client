@@ -65,21 +65,21 @@ const PartPage = () => {
             <PartImagesList />
             <div className={styles.part__info}>
               <span className={`${styles.part__info__price} ${darkModeClass}`}>
-                {formatPrice(boilerPart.price || 0)} €
+                {formatPrice(boilerPart.price || 0)} P
               </span>
               <span className={styles.part__info__stock}>
                 {boilerPart.in_stock > 0 ? (
                   <span className={styles.part__info__stock__success}>
-                    Laos olemas
+                    Есть на складе
                   </span>
                 ) : (
                   <span className={styles.part__info__stock__not}>
-                    Laos otsas
+                    Нет на складе
                   </span>
                 )}
               </span>
               <span className={styles.part__info__code}>
-                Num: {boilerPart.vendor_code}
+                Артикул: {boilerPart.vendor_code}
               </span>
               <button
                 className={`${styles.part__info__btn} ${
@@ -100,7 +100,7 @@ const PartPage = () => {
                     {isInCart ? (
                       <span>Добавлено в карзину</span>
                     ) : (
-                      <span>Lisa ostukorvi</span>
+                      <span>Положить в корзину</span>
                     )}
                   </>
                 )}
@@ -112,7 +112,7 @@ const PartPage = () => {
         {isMobile && (
           <div className={styles.part__accordion}>
             <div className={styles.part__accordion__inner}>
-              <PartAccordion title="Kirjeldus">
+              <PartAccordion title="Описание">
                 <div
                   className={`${styles.part__accordion__content} ${darkModeClass}`}
                 >
@@ -129,7 +129,7 @@ const PartPage = () => {
                 </div>
               </PartAccordion>
             </div>
-            <PartAccordion title="Ühilduvus">
+            <PartAccordion title="Совместимость">
               <div
                 className={`${styles.part__accordion__content} ${darkModeClass}`}
               >

@@ -53,38 +53,3 @@ export const removeClassNamesForOverlayAndBody = () => {
   document.querySelector('.overlay')?.classList.remove('open-search')
   document.querySelector('.body')?.classList.remove('overflow-hidden')
 }
-
-export const nameValidationRules = (
-  message: string,
-  requireMessage?: string
-) => ({
-  ...(requireMessage && { required: requireMessage }),
-  pattern: {
-    value: /^[а-яА-Яa-zA-ZёЁ]*$/,
-    message,
-  },
-  minLength: 2,
-  maxLength: 15,
-})
-
-export const phoneValidationRules = (
-  message: string,
-  requireMessage?: string
-) => ({
-  ...(requireMessage && { required: requireMessage }),
-  pattern: {
-    value: /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im,
-    message,
-  },
-})
-
-export const emailValidationRules = (
-  message: string,
-  requireMessage?: string
-) => ({
-  ...(requireMessage && { required: requireMessage }),
-  pattern: {
-    value: /\S+@\S+\.\S+/,
-    message,
-  },
-})

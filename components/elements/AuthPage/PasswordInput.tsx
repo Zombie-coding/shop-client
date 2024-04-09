@@ -5,7 +5,7 @@ const PasswordInput = ({ register, errors }: IAuthPageInput) => (
   <label className={styles.form__label}>
     <input
       {...register('password', {
-        required: 'Sisestage oma parool!',
+        required: 'Введите пароль!',
         minLength: 4,
         maxLength: 20,
       })}
@@ -17,10 +17,10 @@ const PasswordInput = ({ register, errors }: IAuthPageInput) => (
       <span className={styles.error_alert}>{errors.password?.message}</span>
     )}
     {errors.password && errors.password.type === 'minLength' && (
-      <span className={styles.error_alert}>Vähemalt 4 tähemärki!</span>
+      <span className={styles.error_alert}>Минимум 4 символа!</span>
     )}
     {errors.password && errors.password.type === 'maxLength' && (
-      <span className={styles.error_alert}>Mitte rohkem kui 20 tähemärki!</span>
+      <span className={styles.error_alert}>Не более 20 символов!</span>
     )}
   </label>
 )

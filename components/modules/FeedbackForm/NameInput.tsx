@@ -3,16 +3,16 @@ import styles from '@/styles/feedbackForm/index.module.scss'
 
 const NameInput = ({ register, errors, darkModeClass }: IFeedbackInput) => (
   <label className={`${styles.feedback_form__form__label} ${darkModeClass}`}>
-    <span>Nimi *</span>
+    <span>Имя *</span>
     <input
       className={styles.feedback_form__form__input}
       type="text"
-      placeholder="Toomas"
+      placeholder="Иван"
       {...register('name', {
-        required: 'Sisesta nimi!',
+        required: 'Введите Имя!',
         pattern: {
-          value: /^[a-zA-Z\u00C0-\u017F\s'-]*$/,
-          message: 'Lubamatu väärtus',
+          value: /^[а-яА-Яa-zA-ZёЁ]*$/,
+          message: 'Недопустимое значение',
         },
         minLength: 2,
         maxLength: 15,
@@ -22,10 +22,10 @@ const NameInput = ({ register, errors, darkModeClass }: IFeedbackInput) => (
       <span className={styles.error_alert}>{errors.name?.message}</span>
     )}
     {errors.name && errors.name.type === 'minLength' && (
-      <span className={styles.error_alert}>Vähemalt 2 märki!</span>
+      <span className={styles.error_alert}>Минимум 2 символа!</span>
     )}
     {errors.name && errors.name.type === 'maxLength' && (
-      <span className={styles.error_alert}>Mitte rohkem kui 15 sümbolit!</span>
+      <span className={styles.error_alert}>Не более 15 символов!</span>
     )}
   </label>
 )

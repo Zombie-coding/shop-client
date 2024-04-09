@@ -24,14 +24,14 @@ const Footer = () => {
               {!isMedia500 && (
                 <>
                   <h3 className={styles.footer__top__item__title}>
-                  Veebipood
+                    Интернет-магазин
                   </h3>
                   <OnlineStoreContent />
                 </>
               )}
               {isMedia500 && (
                 <Accordion
-                  title="Veebipood"
+                  title="Интернет-магазин"
                   titleClass={styles.footer__top__item__title}
                   arrowOpenClass={styles.open}
                 >
@@ -60,15 +60,15 @@ const Footer = () => {
             </div>
           </div>
           <div className={styles.footer__top__item}>
-            <h3 className={styles.footer__top__item__title}>Kontaktid</h3>
+            <h3 className={styles.footer__top__item__title}>Контакты</h3>
             <ul
               className={`${styles.footer__top__item__list} ${styles.footer__top__item__contacts}`}
             >
               <li className={styles.footer__top__item__list__item}>
                 <Link href="/contacts" passHref legacyBehavior>
                   <a className={styles.footer__top__item__list__item__link}>
-                    <span>Meie aadress:</span>
-                    <span>Õismäe tee 130,Tallinn (Sisse pääse Spa Taga pole) </span>
+                    <span>Наш адрес:</span>
+                    <span>г. Москва, ул. ... д....</span>
                     <span>
                       <MarkerSvg />
                     </span>
@@ -77,11 +77,11 @@ const Footer = () => {
               </li>
               <li className={styles.footer__top__item__list__item}>
                 <a
-                  href="tel:+37255625799"
+                  href="tel:+780955555555"
                   className={styles.footer__top__item__list__item__link}
                 >
-                  <span>Kontakt Tel:</span>
-                  <span>+372 55625799</span>
+                  <span>Наш контактный телефон:</span>
+                  <span>+7(8095) 555-55-55</span>
                   <span>
                     <PhoneSvg />
                   </span>
@@ -89,11 +89,11 @@ const Footer = () => {
               </li>
               <li className={styles.footer__top__item__list__item}>
                 <a
-                  href="voinikoo.ee@gmail.com"
+                  href="mailto:info@zapchasti.com.ru"
                   className={styles.footer__top__item__list__item__link}
                 >
                   <span>E-mail:</span>
-                  <span>voinikoo.ee@gmail.com</span>
+                  <span>info@zapchasti.com.ru</span>
                   <span>
                     <MailSvg />
                   </span>
@@ -106,7 +106,7 @@ const Footer = () => {
           <div className={styles.footer__bottom__block}>
             <div className={styles.footer__bottom__block__left}>
               <h3 className={styles.footer__bottom__block__title}>
-              Võtame vastu makse:
+                Мы принимаем к оплате:
               </h3>
               <ul className={styles.footer__bottom__block__pay}>
                 <li className={styles.footer__bottom__block__pay__item}>
@@ -125,27 +125,30 @@ const Footer = () => {
             </div>
             <div className={styles.footer__bottom__block__right}>
               <h3 className={styles.footer__bottom__block__title}>
-              Meie sotsiaalmeediad
+                Мы в соцсети:
               </h3>
               <ul className={styles.footer__bottom__block__social}>
                 <li className={styles.footer__bottom__block__social__item}>
-                 
+                  <a
+                    href="#"
+                    className={styles.footer__bottom__block__social__item_vk}
+                  />
                 </li>
                 <li className={styles.footer__bottom__block__social__item}>
                   <a
-                    href="https://www.facebook.com/profile.php?id=61555240629816"
+                    href="#"
                     className={styles.footer__bottom__block__social__item_fb}
                   />
                 </li>
                 <li className={styles.footer__bottom__block__social__item}>
                   <a
-                    href="https://www.instagram.com/voinikooee/"
+                    href="#"
                     className={styles.footer__bottom__block__social__item_inst}
                   />
                 </li>
                 <li className={styles.footer__bottom__block__social__item}>
                   <a
-                    href="https://www.youtube.com/channel/UCvaNdzi2b2hQYui_S3smaqw"
+                    href="#"
                     className={styles.footer__bottom__block__social__item_ytb}
                   />
                 </li>
@@ -155,7 +158,7 @@ const Footer = () => {
           {isMedia750 && <FooterLogo />}
           <div className={styles.footer__bottom__block}>
             <p className={styles.footer__bottom__block__copyright}>
-              © «Voinikoo.ee» 2024.
+              © «Детали для газовых котлов» 2021.
             </p>
           </div>
         </div>

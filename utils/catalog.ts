@@ -11,7 +11,6 @@ const createManufacturerCheckboxObj = (title: string) => ({
 
 export const boilerManufacturers = [
   'Ariston',
-  'Liim',
   'Chaffoteaux&Maury',
   'Baxi',
   'Bongioanni',
@@ -25,7 +24,6 @@ export const boilerManufacturers = [
 export const partsManufacturers = [
   'Azure',
   'Gloves',
-  'Universal',
   'Cambridgeshire',
   'Salmon',
   'Montana',

@@ -40,7 +40,7 @@ const OrderItem = ({ item }: { item: IShoppingCartItem }) => {
         {isMedia1160 &&
           (item.in_stock === 0 ? (
             <span className={styles.order__cart__list__item__empty}>
-              Laos otsas
+              Нет на складе
             </span>
           ) : (
             <CartItemCounter
@@ -56,7 +56,7 @@ const OrderItem = ({ item }: { item: IShoppingCartItem }) => {
         {!isMedia1160 &&
           (item.in_stock === 0 ? (
             <span className={styles.order__cart__list__item__empty}>
-              Laos otsas
+              Нет на складе
             </span>
           ) : (
             <CartItemCounter
@@ -70,7 +70,7 @@ const OrderItem = ({ item }: { item: IShoppingCartItem }) => {
         <span
           className={`${styles.order__cart__list__item__price} ${darkModeClass}`}
         >
-          {formatPrice(price)} €
+          {formatPrice(price)} P
         </span>
         <button
           className={styles.order__cart__list__item__delete}

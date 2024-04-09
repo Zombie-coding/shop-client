@@ -8,13 +8,13 @@ import { useCallback } from 'react'
 
 function Catalog({ query }: { query: IQueryParams }) {
   const { shouldLoadContent } = useRedirectByUserCheck()
-  const getDefaultTextGenerator = useCallback(() => 'Kataloog', [])
+  const getDefaultTextGenerator = useCallback(() => 'Каталог', [])
   const getTextGenerator = useCallback((param: string) => ({}[param]), [])
 
   return (
     <>
       <Head>
-        <title>Voinikoo  | {shouldLoadContent ? 'Kataloog' : ''}</title>
+        <title>Аква Тепмикс | {shouldLoadContent ? 'Каталог' : ''}</title>
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

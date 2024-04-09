@@ -18,7 +18,7 @@ function CatalogPartPage({ query }: { query: IQueryParams }) {
   const [error, setError] = useState(false)
   const router = useRouter()
   const getDefaultTextGenerator = useCallback(
-    (subpath: string) => subpath.replace('catalog', 'Kataloog'),
+    (subpath: string) => subpath.replace('catalog', 'Каталог'),
     []
   )
   const getTextGenerator = useCallback((param: string) => ({}[param]), [])
@@ -52,7 +52,7 @@ function CatalogPartPage({ query }: { query: IQueryParams }) {
   return (
     <>
       <Head>
-        <title>Voinikoo | {shouldLoadContent ? boilerPart.name : ''}</title>
+        <title>Аква Тепмикс | {shouldLoadContent ? boilerPart.name : ''}</title>
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

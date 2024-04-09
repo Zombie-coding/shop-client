@@ -36,7 +36,7 @@ const CatalogPage = ({ query }: { query: IQueryParams }) => {
   const filteredBoilerParts = useStore($filteredBoilerParts)
   const boilerParts = useStore($boilerParts)
   const [spinner, setSpinner] = useState(false)
-  const [priceRange, setPriceRange] = useState([1, 100])
+  const [priceRange, setPriceRange] = useState([1000, 9000])
   const [isFilterInQuery, setIsFilterInQuery] = useState(false)
   const [isPriceRangeChanged, setIsPriceRangeChanged] = useState(false)
   const pagesCount = Math.ceil(boilerParts.count / 20)
@@ -211,13 +211,13 @@ const CatalogPage = ({ query }: { query: IQueryParams }) => {
     <section className={styles.catalog}>
       <div className={`container ${styles.catalog__container}`}>
         <h2 className={`${styles.catalog__title} ${darkModeClass}`}>
-        Kaubakataloog
+          Каталог товаров
         </h2>
         <div className={`${styles.catalog__top} ${darkModeClass}`}>
           <AnimatePresence>
             {isAnyBoilerManufacturerChecked && (
               <ManufacturersBlock
-                title="Kaubafirmad:"
+                title="Производитель котлов:"
                 event={updateBoilerManufacturer}
                 manufacturersList={boilerManufacturers}
               />
@@ -226,7 +226,7 @@ const CatalogPage = ({ query }: { query: IQueryParams }) => {
           <AnimatePresence>
             {isAnyPartsManufacturerChecked && (
               <ManufacturersBlock
-                title="Tootekategooria:"
+                title="Производитель запчастей:"
                 event={updatePartsManufacturer}
                 manufacturersList={partsManufacturers}
               />
@@ -238,7 +238,7 @@ const CatalogPage = ({ query }: { query: IQueryParams }) => {
               disabled={resetFilterBtnDisabled}
               onClick={resetFilters}
             >
-              Filtri tühjendamine
+              Сбросить фильтр
             </button>
             <button
               className={styles.catalog__top__mobile_btn}
@@ -248,7 +248,7 @@ const CatalogPage = ({ query }: { query: IQueryParams }) => {
                 <FilterSvg />
               </span>
               <span className={styles.catalog__top__mobile_btn__text}>
-              Filter
+                Фильтр
               </span>
             </button>
             <FilterSelect setSpinner={setSpinner} />
@@ -288,7 +288,7 @@ const CatalogPage = ({ query }: { query: IQueryParams }) => {
                     <CatalogItem item={item} key={item.id} />
                   ))
                 ) : (
-                  <span>Tootenimekiri on tühi...</span>
+                  <span>Список товаров пуст...</span>
                 )}
               </ul>
             )}

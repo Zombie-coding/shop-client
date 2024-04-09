@@ -66,7 +66,7 @@ const CartPopup = forwardRef<HTMLDivElement, IWrappedComponentProps>(
             <span className={styles.cart__svg}>
               <ShoppingCartSvg />
             </span>
-            <span className={styles.cart__text}>ostukorv</span>
+            <span className={styles.cart__text}>Корзина</span>
           </button>
         ) : (
           <button
@@ -81,7 +81,7 @@ const CartPopup = forwardRef<HTMLDivElement, IWrappedComponentProps>(
             <span className={styles.cart__svg}>
               <ShoppingCartSvg />
             </span>
-            <span className={styles.cart__text}>Ostukorv</span>
+            <span className={styles.cart__text}>Корзина</span>
           </button>
         )}
         <AnimatePresence>
@@ -93,7 +93,7 @@ const CartPopup = forwardRef<HTMLDivElement, IWrappedComponentProps>(
               className={`${styles.cart__popup} ${darkModeClass}`}
               style={{ transformOrigin: 'right top' }}
             >
-              <h3 className={styles.cart__popup__title}>Ostukorv</h3>
+              <h3 className={styles.cart__popup__title}>Корзина</h3>
               <ul className={styles.cart__popup__list}>
                 {shoppingCart.length ? (
                   shoppingCart.map((item) => (
@@ -104,7 +104,7 @@ const CartPopup = forwardRef<HTMLDivElement, IWrappedComponentProps>(
                     <span
                       className={`${styles.cart__popup__empty__text} ${darkModeClass}`}
                     >
-                      Ostukorvi on tühi
+                      Корзина пуста
                     </span>
                   </li>
                 )}
@@ -114,10 +114,10 @@ const CartPopup = forwardRef<HTMLDivElement, IWrappedComponentProps>(
                   <span
                     className={`${styles.cart__popup__footer__text} ${darkModeClass}`}
                   >
-                    Tellimus summa:
+                    Общая сумма заказа:
                   </span>
                   <span className={styles.cart__popup__footer__price}>
-                    {formatPrice(totalPrice)} €
+                    {formatPrice(totalPrice)} P
                   </span>
                 </div>
                 <Link href="/order" passHref legacyBehavior>
@@ -125,7 +125,7 @@ const CartPopup = forwardRef<HTMLDivElement, IWrappedComponentProps>(
                     className={styles.cart__popup__footer__btn}
                     disabled={!shoppingCart.length}
                   >
-                    Vormi tellimus
+                    Оформить заказ
                   </button>
                 </Link>
               </div>

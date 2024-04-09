@@ -34,19 +34,19 @@ const FilterSelect = ({
     if (boilerParts.rows) {
       switch (router.query.first) {
         case 'cheap':
-          updateCategoryOption('Esiteks, odavad')
+          updateCategoryOption('Сначала дешевые')
           setBoilerPartsCheapFirst()
           break
         case 'expensive':
-          updateCategoryOption('Esiteks, kallid')
+          updateCategoryOption('Сначала дорогие')
           setBoilerPartsExpensiveFirst()
           break
         case 'popular':
-          updateCategoryOption('Populaarsuse järgi')
+          updateCategoryOption('По популярности')
           setBoilerPartsByPopularity()
           break
         default:
-          updateCategoryOption('Esiteks, odavad')
+          updateCategoryOption('Сначала дешевые')
           setBoilerPartsCheapFirst()
           break
       }
@@ -73,15 +73,15 @@ const FilterSelect = ({
     setCategoryOption(selectedOption)
 
     switch ((selectedOption as IOption).value) {
-      case 'Esiteks, odavad':
+      case 'Сначала дешевые':
         setBoilerPartsCheapFirst()
         updateRoteParam('cheap')
         break
-      case 'Esiteks, kallid':
+      case 'Сначала дорогие':
         setBoilerPartsExpensiveFirst()
         updateRoteParam('expensive')
         break
-      case 'Populaarsuse järgi':
+      case 'По популярности':
         setBoilerPartsByPopularity()
         updateRoteParam('popular')
         break
@@ -92,7 +92,7 @@ const FilterSelect = ({
 
   return (
     <Select
-      placeholder="Otsin ...."
+      placeholder="Я ищу..."
       value={categoryOption || createSelectOption('Сначала дешевые')}
       onChange={handleSortOptionChange}
       styles={{

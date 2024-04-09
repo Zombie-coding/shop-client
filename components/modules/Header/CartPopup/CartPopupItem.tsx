@@ -50,7 +50,7 @@ const CartPopupItem = ({ item }: { item: IShoppingCartItem }) => {
       <div className={styles.cart__popup__list__item__bottom}>
         {item.in_stock === 0 ? (
           <span className={styles.cart__popup__list__item__empty}>
-            Laos otsas
+            Нет на складе
           </span>
         ) : (
           <CartItemCounter
@@ -64,7 +64,7 @@ const CartPopupItem = ({ item }: { item: IShoppingCartItem }) => {
         <span
           className={`${styles.cart__popup__list__item__price} ${darkModeClass}`}
         >
-          {formatPrice(price)} €
+          {formatPrice(price)} P
         </span>
       </div>
     </li>

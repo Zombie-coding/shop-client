@@ -79,17 +79,17 @@ const DashboardPage = () => {
           <BrandsSlider />
         </div>
         <h2 className={`${styles.dashboard__title} ${darkModeClass}`}>
-        Uuendused 
+          Детали для газовых котлов
         </h2>
         <div className={styles.dashboard__parts}>
           <h3 className={`${styles.dashboard__parts__title} ${darkModeClass}`}>
-          Müügihitid🔥
+            Хиты продаж
           </h3>
           <DashboardSlider items={bestsellers.rows || []} spinner={spinner} />
         </div>
         <div className={styles.dashboard__parts}>
           <h3 className={`${styles.dashboard__parts__title} ${darkModeClass}`}>
-          Allahindlusega kaubad 🛒
+            Новинки
           </h3>
           <DashboardSlider items={newParts.rows || []} spinner={spinner} />
         </div>
@@ -97,15 +97,16 @@ const DashboardPage = () => {
           <h3
             className={`${styles.dashboard__parts__title} ${styles.dashboard__about__title} ${darkModeClass}`}
           >
-            Ettevõttest
+            О компании
           </h3>
           <p className={`${styles.dashboard__about__text} ${darkModeClass}`}>
-  Teretulemast Voinikoo maailma – teie usaldusväärsele partnerile elektroonika, kodutehnika ja kõige vajaliku soetamisel hubase kodu jaoks. 
-  Meie e-poest leiate laia valiku tipptasemel seadmeid, mis muudavad teie igapäevaelu mugavamaks ja nauditavamaks. 
-  Olgu selleks nutikad kodumasinad, nutitelefonid või kvaliteetse heli ja pildiga meelelahutussüsteemid – meie eesmärk on pakkuda teile parimat valikut. 
-Meie tootevalik aitab teil täiustada kodust arsenali ning me garanteerime kvaliteetse teeninduse igale kliendile. 😊
-</p>
-
+            Инструкции и схемы помогут разобраться в эксплуатации, определить
+            неисправность и правильно выбрать запчасть для ремонта Вашего
+            газового оборудования. Купить запчасть, деталь для ремонта газового
+            котла возможно в любом населенном пункте Российской Федерации:
+            Осуществляем доставку запчасти к газовым котлам в следующие города:
+            Москва, Сан
+          </p>
         </div>
       </div>
     </section>

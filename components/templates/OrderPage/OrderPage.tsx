@@ -109,12 +109,12 @@ const OrderPage = () => {
                   )}
                   )
                 </span>
-                <span>{formatPrice(totalPrice)} €</span>
+                <span>{formatPrice(totalPrice)} P</span>
               </div>
               <div className={styles.order__pay__total}>
                 <span>На сумму</span>
                 <span className={darkModeClass}>
-                  {formatPrice(totalPrice)} €
+                  {formatPrice(totalPrice)} P
                 </span>
               </div>
               <button
